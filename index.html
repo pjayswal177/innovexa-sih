@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KandaGrade AI — inspect onions, record batch quality, and review grading standards."
+    />
+    <meta name="theme-color" content="#091321" />
+    <title>KandaGrade AI — Onion Quality Assessment &amp; Grading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#/live" aria-label="KandaGrade AI home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>KandaGrade <span class="brand-ai">AI</span></span>
+        </a>
+        <a class="button button-primary header-action" href="#/live?camera=1">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 7.5 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.5L15 4H9Zm3 4.5a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          Start Camera
+        </a>
+      </header>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#/live" data-route="live">Live Inspection</a>
+        <a class="nav-link" href="#/analytics" data-route="analytics">Lot Analytics</a>
+        <a class="nav-link" href="#/standards" data-route="standards">Grading Standards</a>
+        <a class="nav-link" href="#/history" data-route="history">Saved Batches</a>
+      </nav>
+
+      <main id="app" class="page-content" tabindex="-1"></main>
+      <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    </div>
+    <input id="photo-input" class="visually-hidden" type="file" accept="image/*" />
+    <script src="script.js"></script>
+  </body>
+</html>
